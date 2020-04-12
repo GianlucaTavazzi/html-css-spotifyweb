@@ -6,7 +6,7 @@
 
 aside{
     height: calc(100vh - 80px);
-    background-color: black;
+    background-color: #111;
     color: rgb(243, 243, 243, 0.8);
     width: 13%;
     position: fixed;
@@ -19,7 +19,7 @@ aside{
 
 main{
     width: 100%;
-    background-color: red;
+    background: linear-gradient(to bottom right, #663300 0%, #996600 100%);
     padding-top: 40px;
     padding-left: 13%;
     padding-bottom: 80px;
@@ -28,9 +28,13 @@ main{
 footer{
     height: 80px;
     width:100%;
-    background-color: blue;
+    padding: 15px;
+    background-color: #222;
+    color: rgb(243, 243, 243, 0.8);
     position: fixed;
     bottom: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .menu-top{
@@ -86,11 +90,22 @@ aside p:hover{
 .menu-list{
     text-align: center;
     font-size: 14px;
+    color: rgb(243, 243, 243, 0.8);
 }
 
 .menu-list ul li{
     display: inline-block;
     padding: 10px 20px;
+}
+
+.menu-list ul li:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.menu-list ul li:first-child{
+    color: white;
+    border-bottom: 1px solid white;
 }
 
 .contenuto{
@@ -111,12 +126,146 @@ aside p:hover{
     flex-wrap: wrap;
 }
 
+.artisti{
+    position: relative;
+}
+
+.artisti:hover{
+    opacity: 0.8;
+}
+
+.artisti .fa-play-circle{
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    padding: 50px;
+    border-radius: 50%;
+}
+
+.fa-play-circle:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
 .artisti p{
     text-align: center;
 }
 
 .artisti img{
-    height: 200px;
+    height: 150px;
     border-radius: 50%;
     margin-top: 25px;
+}
+
+.footer-left{
+    width: 12%;
+}
+
+.footer-left img{
+    height: 50px;
+    float: left;
+}
+
+.footer-left span{
+    float: left;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.footer-left span p:first-of-type{
+    color: white;
+}
+
+.footer-center{
+    width: 40%;
+    text-align: center;
+}
+
+.footer-center .fas, .footer-center .far{
+    padding: 0 20px;
+    font-size: 22px;
+}
+
+.footer-center .fas:hover, .footer-center .far:hover{
+    cursor: pointer;
+    color: white
+}
+
+.footer-center .slider {
+    -webkit-appearance: none;
+    width: 85%;
+    height: 3px;
+    margin-top: 22px;
+    background: rgb(243, 243, 243, 0.6);
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.footer-center .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: rgb(243, 243, 243);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.footer-center .slider::-webkit-slider-thumb:hover{
+    background: white;
+}
+
+.slidecontainer p{
+    display: inline-block;
+    font-size: 12px;
+    padding-top: 2px;
+    padding-left: 5px;
+}
+
+.slidecontainer p:nth-of-type(2){
+    padding-left: 0;
+    padding-right: 5px;
+}
+
+.footer-right{
+    padding: 17px 0;
+    width: 12%;
+}
+
+.footer-right .fas{
+    padding: 0 5px;
+}
+
+.footer-right .fas:hover{
+    cursor: pointer;
+    color: white;
+}
+
+.footer-right .slider {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 3px;
+    background: rgb(243, 243, 243, 0.6);
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    vertical-align: super;
+}
+
+.footer-right .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: rgb(243, 243, 243);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.footer-right .slider::-webkit-slider-thumb:hover{
+    background: white;
 }
