@@ -58,6 +58,9 @@ footer{
 
 .menu-top p:nth-of-type(2){
     color: white;
+    border-left: 3px solid orange;
+    padding-left: 20px;
+    margin-left: -23px;
 }
 
 aside p:hover{
